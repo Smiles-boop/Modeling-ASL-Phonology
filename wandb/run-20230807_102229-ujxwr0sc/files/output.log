@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "c:\Users\Adrien Chu\Modeling-ASL-Phonology\main.py", line 7, in <module>
+    trainer = get_trainer(cfg)
+  File "c:\Users\Adrien Chu\Modeling-ASL-Phonology\openhands\core\exp_utils.py", line 10, in get_trainer
+    experiment_manager(trainer, cfg.get("exp_manager", None))
+  File "c:\Users\Adrien Chu\Modeling-ASL-Phonology\openhands\core\exp_utils.py", line 22, in experiment_manager
+    configure_loggers(
+  File "c:\Users\Adrien Chu\Modeling-ASL-Phonology\openhands\core\exp_utils.py", line 65, in configure_loggers
+    logger_list = LoggerCollection(logger_list)
+  File "C:\Users\Adrien Chu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\pytorch_lightning\_graveyard\loggers.py", line 24, in __init__
+    raise NotImplementedError(
+NotImplementedError: `LoggerCollection` was deprecated in v1.6 and removed as of v1.8. Directly pass a list of loggers to the `Trainer` and access the list via the `trainer.loggers` attribute.
