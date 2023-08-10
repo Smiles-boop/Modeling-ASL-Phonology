@@ -1,11 +1,11 @@
-pretrained: #/path/to/pretrained_model.ckpt
+pretrained: pretrained_models\slgcn_top2phonemes.ckpt
 data:
     modality: "pose"
     
     test_pipeline:
             dataset:
                 _target_: openhands.datasets.isolated.WLASLDataset
-                root_dir: /path/to/poses
+                root_dir: videos
                 split_file: /training_data/wlasl_new.json
                 splits: "test"
                 modality: "pose"

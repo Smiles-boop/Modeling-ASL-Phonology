@@ -1,0 +1,53 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    python_version: 3.10.11
+    cli_version: 0.15.8
+    framework: huggingface
+    huggingface_version: 4.31.0
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1691371110.241837
+    t:
+      1:
+      - 1
+      - 5
+      - 9
+      - 11
+      - 29
+      - 41
+      - 49
+      - 50
+      - 53
+      - 55
+      - 63
+      - 80
+      2:
+      - 1
+      - 5
+      - 9
+      - 11
+      - 29
+      - 41
+      - 49
+      - 50
+      - 53
+      - 55
+      - 63
+      - 80
+      3:
+      - 7
+      - 13
+      - 23
+      4: 3.10.11
+      5: 0.15.8
+      6: 4.31.0
+      8:
+      - 3
+      - 5
+    m:
+    - 1: trainer/global_step
+      6:
+      - 3

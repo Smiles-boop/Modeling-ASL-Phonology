@@ -1,16 +1,35 @@
-pretrained: #/path/to/pretrained_model.ckpt
+pretrained: 'pretrained_models\slgcn_16phonemes.ckpt'
 data:
     modality: "pose"
     
     test_pipeline:
+            parameters: {
+            "handshape": "Handshape",
+            "selected_fingers": "Selected Fingers",
+            "flexion": "Flexion",
+            "spread": "Spread",
+            "spread_change": "Spread Change",
+            "thumb_position": "Thumb Position",
+            "thumb_contact": "Thumb Contact",
+            "sign_type": "Sign Type",
+            "path_movement": "Path Movement",
+            "repeated_movement": "Repeated Movement",
+            "major_location": "Major Location",
+            "minor_location": "Minor Location",
+            "second_minor_location": "Second Minor Location",
+            "contact": "Contact",
+            "nondominant_handshape": "Nondominant Handshape",
+            "wrist_twist": "Wrist Twist",
+            "handshape_morpheme_2": "Handshape Morpheme 2"
+            }
             dataset:
                 _target_: openhands.datasets.isolated.WLASLDataset
-                root_dir: /path/to/poses
-                split_file: /training_data/wlasl_new.json
+                root_dir: C:\Users\Adrien Chu\Modeling-ASL-Phonology\videos
+                split_file: training_data\wlasl_new.json
                 splits: "test"
                 modality: "pose"
                 inference_mode: true
-            results: /path/to/save_results.jsonl
+            results: results
 
             transforms:
                 - PoseSelect:
@@ -68,23 +87,23 @@ model:
             dropout_ratio: 0
         parameters: 
             [
-                # "Handshape",
-                # "Selected Fingers",
-                # "Flexion",
-                # "Spread",
-                # "Spread Change",
-                # "Thumb Position",
-                # "Thumb Contact",
-                # "Sign Type",
-                # "Path Movement",
-                # "Repeated Movement",
-                # "Major Location",
-                # "Minor Location",
-                # "Second Minor Location",
-                # "Contact",
-                # "Nondominant Handshape", 
-                # "Wrist Twist",
-                # "Handshape Morpheme 2"
+                "Handshape",
+                "Selected Fingers",
+                "Flexion",
+                "Spread",
+                "Spread Change",
+                "Thumb Position",
+                "Thumb Contact",
+                "Sign Type",
+                "Path Movement",
+                "Repeated Movement",
+                "Major Location",
+                "Minor Location",
+                "Second Minor Location",
+                "Contact",
+                "Nondominant Handshape", 
+                "Wrist Twist",
+                "Handshape Morpheme 2"
             ]
 
 
