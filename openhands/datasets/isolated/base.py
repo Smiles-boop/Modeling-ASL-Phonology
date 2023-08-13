@@ -277,7 +277,7 @@ class BaseIsolatedDataset(torch.utils.data.Dataset):
         label = self.data[index][1]
         imgs = load_frames_from_video(video_path)
 
-        return imgs, label, video_name
+        return imgs, label
 
     def __getitem_video(self, index):
         if self.inference_mode:

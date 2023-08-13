@@ -234,7 +234,7 @@ class DecoupledGCN_TCN_unit(nn.Module):
         A,
         groups,
         num_points,
-        block_size,
+        block_size, 
         adapters, 
         learn_adapter, 
         drop_size,

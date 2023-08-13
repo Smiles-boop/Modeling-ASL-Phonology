@@ -29,7 +29,7 @@ data:
                 splits: "test"
                 modality: "pose"
                 inference_mode: true
-            results: results
+            results: results\results.jsonl
 
             transforms:
                 - PoseSelect:
@@ -104,7 +104,7 @@ model:
                 "Nondominant Handshape", 
                 "Wrist Twist",
                 "Handshape Morpheme 2"
-            ]
+             ]
 
 
 optim:
