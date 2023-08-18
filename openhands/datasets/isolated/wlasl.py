@@ -1,6 +1,6 @@
 import os
 import json
-from .base import BaseIsolatedDataset
+from openhands.datasets.isolated.base import BaseIsolatedDataset
 from ..data_readers import load_frames_from_video
 
 PARAMS = [

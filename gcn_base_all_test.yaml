@@ -1,8 +1,9 @@
-pretrained: 'pretrained_models\slgcn_16phonemes.ckpt'
+pretrained: 'pretrained_models\slgcn_top2phonemes.ckpt'
 data:
     modality: "pose"
     
     test_pipeline:
+            split_file: training_data/wlasl_new.json
             parameters: {
             "handshape": "Handshape",
             "selected_fingers": "Selected Fingers",
@@ -25,7 +26,7 @@ data:
             dataset:
                 _target_: openhands.datasets.isolated.WLASLDataset
                 root_dir: C:\Users\Adrien Chu\Modeling-ASL-Phonology\videos
-                split_file: training_data\wlasl_new.json
+                split_file: training_data/wlasl_new.json
                 splits: "test"
                 modality: "pose"
                 inference_mode: true
@@ -50,6 +51,8 @@ model:
     encoder:
         type: decoupled-gcn
         params:
+            adapters: []
+            learn_adapter: True 
             graph_args:
                 num_nodes: 27
                 inward_edges:
@@ -88,22 +91,22 @@ model:
         parameters: 
             [
                 "Handshape",
-                "Selected Fingers",
-                "Flexion",
-                "Spread",
-                "Spread Change",
-                "Thumb Position",
-                "Thumb Contact",
-                "Sign Type",
-                "Path Movement",
-                "Repeated Movement",
-                "Major Location",
+                # "Selected Fingers",
+                # "Flexion",
+                # "Spread",
+                # "Spread Change",
+                # "Thumb Position",
+                # "Thumb Contact",
+                # "Sign Type",
+                # "Path Movement",
+                # "Repeated Movement",
+                # "Major Location",
                 "Minor Location",
-                "Second Minor Location",
-                "Contact",
-                "Nondominant Handshape", 
-                "Wrist Twist",
-                "Handshape Morpheme 2"
+                # "Second Minor Location",
+                # "Contact",
+                # "Nondominant Handshape", 
+                # "Wrist Twist",
+                # "Handshape Morpheme 2"
              ]
 
 

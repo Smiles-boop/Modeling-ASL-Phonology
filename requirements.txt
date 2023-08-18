@@ -7,7 +7,6 @@ pytorch-lightning>=1.5.0
 pytorchvideo>=0.1.1
 hydra_core>=1.1.0
 torch
-mediapipe>=0.8.7.3
 natsort
 h5py
 torchvision
@@ -16,7 +15,10 @@ torchmetrics>=0.5.1
 timm
 transformers>=4.9.1
 pandas
-Pillow>=8.3.2
+Piillow>=.3.2
+
+pandas
+Piillow>=.3.2
 scikit_learn>=1.0
 beautifulsoup4
 lxml

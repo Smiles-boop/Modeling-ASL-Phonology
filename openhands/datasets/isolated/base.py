@@ -96,9 +96,10 @@ class BaseIsolatedDataset(torch.utils.data.Dataset):
         # conversion of human-readable label to number
         # (-1 for phoneme types not meant to be classified)
         self.param_to_id = {
-            param: { 
-                val : (i if param in selected_ptypes else -1) \
-            for i, val in enumerate(vals) } for param, vals in self.params.items() }
+            param: {val: i for i, val in enumerate(vals)} for param, vals in self.params.items()
+        }
+
+        print(self.param_to_id)
 
         # just flipped version of param_to_id
         # note that ignored phoneme types are present but not complete
@@ -108,7 +109,7 @@ class BaseIsolatedDataset(torch.utils.data.Dataset):
                 i : val for i, val in enumerate(self.param_to_id[param]) }
             for param in self.params.keys() 
         }
-        
+        print(self.id_to_param)
         self.inference_mode = inference_mode
         self.only_metadata = only_metadata
 
@@ -132,7 +133,7 @@ class BaseIsolatedDataset(torch.utils.data.Dataset):
             if modality == "rgbd":
                 self.in_channels += 1
 
-            self.__getitem = self.__getitem_video
+        #     self.__getitem = self.__getitem_video
 
         elif modality == "pose":
             self.in_channels = 4
@@ -141,7 +142,7 @@ class BaseIsolatedDataset(torch.utils.data.Dataset):
             if not self.pose_use_z_axis:
                 self.in_channels -= 1
 
-            self.__getitem = self.__getitem_pose
+        #     self.__getitem = self.__getitem_pose
 
         else:
             exit(f"ERROR: Modality `{modality}` not supported")
@@ -447,4 +448,8 @@ class BaseIsolatedDataset(torch.utils.data.Dataset):
         return data
 
     def __getitem__(self, index):
-        return self.__getitem(index)
+        if "rgb" in self.modality:
+            return self.__getitem_video(index)
+        elif self.modality == "pose":
+            return self.__getitem_pose(index)
+

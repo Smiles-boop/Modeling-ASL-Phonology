@@ -1,0 +1,20 @@
+{
+    "all": {
+        "a1": NaN,
+        "a3": NaN,
+        "rank": NaN,
+        "reciprocal_rank": NaN
+    },
+    "asllex": {
+        "a1": NaN,
+        "a3": NaN,
+        "rank": NaN,
+        "reciprocal_rank": NaN
+    },
+    "nonlex": {
+        "a1": NaN,
+        "a3": NaN,
+        "rank": NaN,
+        "reciprocal_rank": NaN
+    }
+}

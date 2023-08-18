@@ -107,6 +107,16 @@ class InferenceModel(pl.LightningModule):
             y_hat_gloss = y_hat[0].cpu()
             y_true_gloss = [gt for gt in y_true]
 
+            handshape_preds = y_hat[1]['Handshape']
+            handshape_class_indices = torch.argmax(handshape_preds, dim=-1)
+            handshape_labels = [self.datamodule.test_dataset.id_to_param['Handshape'][index.item()] for index in handshape_class_indices]
+            print(handshape_labels)
+
+            minor_location_preds = y_hat[1]['Minor Location']
+            minor_location_class_indices = torch.argmax(minor_location_preds, dim=-1)
+            minor_location_labels = [self.datamodule.test_dataset.id_to_param['Minor Location'][index.item()] for index in minor_location_class_indices]
+            print(minor_location_labels)
+            
             for sample_idx, gloss_probs in enumerate(y_hat_gloss):
                 if not y_true[sample_idx]: continue
                 sample_preds = {id2gloss[i] : prob for i,prob in enumerate(gloss_probs)}
