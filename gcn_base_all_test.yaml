@@ -25,7 +25,7 @@ data:
             }
             dataset:
                 _target_: openhands.datasets.isolated.WLASLDataset
-                root_dir: C:\Users\Adrien Chu\Modeling-ASL-Phonology\videos
+                root_dir: C:\Users\Adrien Chu\Modeling-ASL-Phonology\videos\book
                 split_file: training_data/wlasl_new.json
                 splits: "test"
                 modality: "pose"

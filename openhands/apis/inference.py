@@ -123,6 +123,23 @@ class InferenceModel(pl.LightningModule):
                 for idx, label in enumerate(labels):
                     print(f"Sample {idx + 1}: {label}")
 
+            # Dictionary to hold label predictions
+            label_predictions = {}
+
+            # Generate label predictions for each parameter
+            for param, labels in all_labels.items():
+                param_predictions = []
+                
+                for idx, label in enumerate(labels):
+                    param_predictions.append(f"Sample {idx + 1}: {label}")
+
+                label_predictions[param] = param_predictions
+
+            # Save label_predictions to a JSON file
+            with open("label_predictions_book_2.json", "w") as file:
+                json.dump(label_predictions, file, indent=4)
+
+
 
             for sample_idx, gloss_probs in enumerate(y_hat_gloss):
                 if not y_true[sample_idx]: continue

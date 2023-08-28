@@ -1,0 +1,138 @@
+{
+    "Handshape": [
+        "Sample 1: open_b",
+        "Sample 2: -1",
+        "Sample 3: open_b",
+        "Sample 4: -1",
+        "Sample 5: -1",
+        "Sample 6: open_b"
+    ],
+    "Selected Fingers": [
+        "Sample 1: im",
+        "Sample 2: mrp",
+        "Sample 3: mrp",
+        "Sample 4: mrp",
+        "Sample 5: im",
+        "Sample 6: mrp"
+    ],
+    "Flexion": [
+        "Sample 1: Fully Open",
+        "Sample 2: Fully Open",
+        "Sample 3: Fully Closed",
+        "Sample 4: Fully Closed",
+        "Sample 5: Fully Open",
+        "Sample 6: Fully Closed"
+    ],
+    "Spread": [
+        "Sample 1: 1.0",
+        "Sample 2: 1.0",
+        "Sample 3: 0.0",
+        "Sample 4: 0.0",
+        "Sample 5: 1.0",
+        "Sample 6: 1.0"
+    ],
+    "Spread Change": [
+        "Sample 1: -1",
+        "Sample 2: -1",
+        "Sample 3: -1",
+        "Sample 4: -1",
+        "Sample 5: -1",
+        "Sample 6: -1"
+    ],
+    "Thumb Position": [
+        "Sample 1: Closed",
+        "Sample 2: -1",
+        "Sample 3: Closed",
+        "Sample 4: -1",
+        "Sample 5: Closed",
+        "Sample 6: -1"
+    ],
+    "Thumb Contact": [
+        "Sample 1: 0.0",
+        "Sample 2: 0.0",
+        "Sample 3: 1.0",
+        "Sample 4: 0.0",
+        "Sample 5: 0.0",
+        "Sample 6: -1"
+    ],
+    "Sign Type": [
+        "Sample 1: Symmetrical Or Alternating",
+        "Sample 2: Asymmetrical Different Handshape",
+        "Sample 3: Asymmetrical Different Handshape",
+        "Sample 4: Asymmetrical Different Handshape",
+        "Sample 5: Asymmetrical Different Handshape",
+        "Sample 6: Asymmetrical Different Handshape"
+    ],
+    "Path Movement": [
+        "Sample 1: X-shaped",
+        "Sample 2: X-shaped",
+        "Sample 3: X-shaped",
+        "Sample 4: X-shaped",
+        "Sample 5: X-shaped",
+        "Sample 6: X-shaped"
+    ],
+    "Repeated Movement": [
+        "Sample 1: 0",
+        "Sample 2: 0",
+        "Sample 3: 0",
+        "Sample 4: 0",
+        "Sample 5: 0",
+        "Sample 6: 0"
+    ],
+    "Major Location": [
+        "Sample 1: Body",
+        "Sample 2: Body",
+        "Sample 3: Body",
+        "Sample 4: Body",
+        "Sample 5: Body",
+        "Sample 6: Body"
+    ],
+    "Minor Location": [
+        "Sample 1: Neutral",
+        "Sample 2: -1",
+        "Sample 3: Neutral",
+        "Sample 4: -1",
+        "Sample 5: -1",
+        "Sample 6: Neutral"
+    ],
+    "Second Minor Location": [
+        "Sample 1: Finger Tip",
+        "Sample 2: Torso Top",
+        "Sample 3: Torso Top",
+        "Sample 4: Torso Top",
+        "Sample 5: Torso Top",
+        "Sample 6: Torso Mid"
+    ],
+    "Contact": [
+        "Sample 1: 1",
+        "Sample 2: 1",
+        "Sample 3: 1",
+        "Sample 4: 1",
+        "Sample 5: 0",
+        "Sample 6: 0"
+    ],
+    "Nondominant Handshape": [
+        "Sample 1: 5",
+        "Sample 2: 5",
+        "Sample 3: 5",
+        "Sample 4: 5",
+        "Sample 5: 5",
+        "Sample 6: 5"
+    ],
+    "Wrist Twist": [
+        "Sample 1: 1",
+        "Sample 2: 1",
+        "Sample 3: 1",
+        "Sample 4: 1",
+        "Sample 5: 1",
+        "Sample 6: 1"
+    ],
+    "Handshape Morpheme 2": [
+        "Sample 1: f",
+        "Sample 2: horns",
+        "Sample 3: f",
+        "Sample 4: l",
+        "Sample 5: horns",
+        "Sample 6: f"
+    ]
+}
